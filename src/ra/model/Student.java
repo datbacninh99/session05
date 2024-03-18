@@ -1,6 +1,7 @@
 package ra.model; // Khai báo package tên là ra.model
 
 import java.util.Scanner; // Import thư viện Scanner từ java.util để nhập dữ liệu từ bàn phím
+
 public class Student { // Khai báo một class public tên là Student
     private int id; // Khai báo biến private id kiểu int
     private String name; // Khai báo biến private name kiểu String
@@ -8,8 +9,10 @@ public class Student { // Khai báo một class public tên là Student
     private Boolean gender; // Khai báo biến private gender kiểu Boolean
     private String address; // Khai báo biến private address kiểu String
     private int phone; // Khai báo biến private phone kiểu int
+
     public Student() { // Constructor không tham số của class Student
     }
+
     public Student(int id, String name, int age, Boolean gender, String address, int phone) { // Constructor có tham số của class Student
         this.id = id; // Gán giá trị cho biến id của đối tượng
         this.name = name; // Gán giá trị cho biến name của đối tượng
@@ -18,42 +21,55 @@ public class Student { // Khai báo một class public tên là Student
         this.address = address; // Gán giá trị cho biến address của đối tượng
         this.phone = phone; // Gán giá trị cho biến phone của đối tượng
     }
+
     public int getId() { // Phương thức getter cho biến id
         return id; // Trả về giá trị của biến id
     }
+
     public void setId(int id) { // Phương thức setter cho biến id
         this.id = id; // Gán giá trị cho biến id của đối tượng
     }
+
     public String getName() { // Phương thức getter cho biến name
         return name; // Trả về giá trị của biến name
     }
+
     public void setName(String name) { // Phương thức setter cho biến name
         this.name = name; // Gán giá trị cho biến name của đối tượng
     }
+
     public int getAge() { // Phương thức getter cho biến age
         return age; // Trả về giá trị của biến age
     }
+
     public void setAge(int age) { // Phương thức setter cho biến age
         this.age = age; // Gán giá trị cho biến age của đối tượng
     }
+
     public Boolean getGender() { // Phương thức getter cho biến gender
         return gender; // Trả về giá trị của biến gender
     }
+
     public void setGender(Boolean gender) { // Phương thức setter cho biến gender
         this.gender = gender; // Gán giá trị cho biến gender của đối tượng
     }
+
     public String getAddress() { // Phương thức getter cho biến address
         return address; // Trả về giá trị của biến address
     }
+
     public void setAddress(String address) { // Phương thức setter cho biến address
         this.address = address; // Gán giá trị cho biến address của đối tượng
     }
+
     public int getPhone() { // Phương thức getter cho biến phone
         return phone; // Trả về giá trị của biến phone
     }
+
     public void setPhone(int phone) { // Phương thức setter cho biến phone
         this.phone = phone; // Gán giá trị cho biến phone của đối tượng
     }
+
     public void inputData(Scanner scanner, Student[] students, int length) {
         // Phương thức này dùng để nhập dữ liệu cho đối tượng Student
         System.out.println("Nhập vào mã sinh viên: ");
@@ -86,15 +102,16 @@ public class Student { // Khai báo một class public tên là Student
         System.out.println("Nhập vào số điện thoại sinh viên: ");
         phone = Integer.parseInt(scanner.nextLine()); // Nhập số điện thoại sinh viên từ bàn phím và chuyển đổi sang kiểu int
     }
+
     public void displayData() {
         // Phương thức này dùng để hiển thị dữ liệu của đối tượng Student
         System.out.println("Student {" +
-                "id='" + id + '\'' +
-                ", name= '" + name + '\'' +
-                ", age= " + age +
-                ", gender= '" + gender + '\'' +
-                ", address= '" + address + '\'' +
-                ", phone= '" + phone + '\'' +
+                "id ='" + id + '\'' +
+                ", name = '" + name + '\'' +
+                ", age = " + age +
+                ", gender = '" + gender + '\'' +
+                ", address = '" + address + '\'' +
+                ", phone = '" + phone + '\'' +
                 '}');
         // In ra thông tin của sinh viên
     }

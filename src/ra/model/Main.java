@@ -10,6 +10,7 @@ public class Main { // Khai báo lớp public tên là 'Main'
         students[1] = new Student(2, "P002", 21, true, "Bắc Ninh", 87654321); // Khởi tạo phần tử thứ hai của mảng 'students'
         students[2] = new Student(3, "P003", 21, true, "Hưng Yên", 13579113); // Khởi tạo phần tử thứ ba của mảng 'students'
     }
+
     private static int length = 3; // Khai báo biến static 'length' và gán giá trị là 3
 
     public static void main(String[] args) {
@@ -49,6 +50,7 @@ public class Main { // Khai báo lớp public tên là 'Main'
             }
         } while (true); // Vòng lặp vô hạn cho đến khi người dùng thoát chương trình
     }
+
     public static void seachStudent(Scanner scanner) {
         System.out.println("Nhập số tuổi: "); // Yêu cầu người dùng nhập tuổi
         int age = Integer.parseInt(scanner.nextLine()); // Nhận tuổi từ người dùng
@@ -64,6 +66,7 @@ public class Main { // Khai báo lớp public tên là 'Main'
             System.out.println("Không tìm thấy!"); // Thông báo không tìm thấy sinh viên
         }
     }
+
     public static void showAllStudent() {
         // Duyệt qua danh sách sinh viên và hiển thị thông tin của từng sinh viên
         for (int j = 0; j < length; j++) {
@@ -71,6 +74,7 @@ public class Main { // Khai báo lớp public tên là 'Main'
             System.out.println("===============================================");
         }
     }
+
     public static void createStudent() {
         Scanner scanner = new Scanner(System.in); // Khởi tạo đối tượng scanner để nhận input từ người dùng
         System.out.println("Mày muốn nhập mấy thằng?"); // Yêu cầu người dùng nhập số lượng sinh viên muốn thêm
@@ -83,6 +87,7 @@ public class Main { // Khai báo lớp public tên là 'Main'
             length++; // Tăng độ dài danh sách sinh viên
         }
     }
+
     public static void updateStudent() {
         Scanner scanner = new Scanner(System.in); // Khởi tạo đối tượng scanner để nhận input từ người dùng
         System.out.println("Nhập mã sinh viên muốn sửa :"); // Yêu cầu người dùng nhập mã sinh viên muốn sửa
@@ -119,6 +124,7 @@ public class Main { // Khai báo lớp public tên là 'Main'
             }
         }
     }
+
     public static void delete(Scanner scanner) {
         System.out.println("Nhập mã sinh viên muốn xóa: "); // Yêu cầu người dùng nhập mã sinh viên muốn xóa
         int x = Integer.parseInt(scanner.nextLine()); // Nhận mã sinh viên từ người dùng
@@ -136,6 +142,7 @@ public class Main { // Khai báo lớp public tên là 'Main'
             length--; // Giảm độ dài danh sách sinh viên
         }
     }
+
     public static void sort() {
         // Sắp xếp danh sách sinh viên theo tuổi
         for (int i = 0; i < length - 1; i++) {
